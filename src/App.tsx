@@ -143,6 +143,7 @@ export const App: React.FC = () => {
     if (results.some(result => result.status === 'rejected')) {
       setErrorMessage('Unable to delete a todo');
     }
+
     await new Promise(resolve => setTimeout(resolve, 0));
     inputRef.current?.focus();
   };
